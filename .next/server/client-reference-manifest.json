@@ -39,6 +39,14 @@
         "chunks": [],
         "async": false
       }
+    },
+    "(app-client)/./app/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
     }
   },
   "edgeSSRModuleMapping": {},
@@ -138,12 +146,20 @@
         "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
+    },
+    "/Users/enchang/GitHub/fitness-tracker/app/page.tsx": {
+      "id": "(app-client)/./app/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/page:static/chunks/app/page.js"
+      ],
+      "async": false
     }
   },
   "entryCSSFiles": {
-    "/Users/enchang/GitHub/fitness-tracker/app/page": [],
     "/Users/enchang/GitHub/fitness-tracker/app/layout": [
       "static/css/app/layout.css"
-    ]
+    ],
+    "/Users/enchang/GitHub/fitness-tracker/app/page": []
   }
 }
