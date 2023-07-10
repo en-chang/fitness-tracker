@@ -45,20 +45,6 @@ export default function Home() {
           position: 'relative',
           top: '20vh',
           marginRight: '5px',
-          backgroundColor: 'green',
-          borderRadius: '8%',
-          color: 'white',
-        }}
-          onClick={handleClick1}
-        >
-          Increment
-        </button>
-        <button style={{
-          fontSize: '60%',
-          padding: '5px',
-          position: 'relative',
-          top: '20vh',
-          marginLeft: '5px',
           backgroundColor: 'red',
           borderRadius: '8%',
           color: 'white',
@@ -66,6 +52,20 @@ export default function Home() {
           onClick={handleClick2}
         >
           Decrement
+        </button>
+        <button style={{
+          fontSize: '60%',
+          padding: '5px',
+          position: 'relative',
+          top: '20vh',
+          marginLeft: '5px',
+          backgroundColor: 'green',
+          borderRadius: '8%',
+          color: 'white',
+        }}
+          onClick={handleClick1}
+        >
+          Increment
         </button>
       </div>
     </div>
