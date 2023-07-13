@@ -9,13 +9,13 @@ export default function Home() {
   // Function is called everytime increment button is clicked
   const handleClick1 = () => {
     // Counter state is incremented
-    setCounter(counter + 1)
+    setCounter(counter + 5)
   }
   
   // Function is called everytime decrement button is clicked
   const handleClick2 = () => {
     // Counter state is decremented
-    setCounter(counter - 1)
+    setCounter(counter - 5)
   }
 
   return (
@@ -28,9 +28,9 @@ export default function Home() {
       position: 'absolute',
       width: '100%',
       height: '100%',
-      top: '-15%',
+      top: '-25%',
     }}>
-      Fitness Tracker App
+      Fitness Tracker
       <div style={{
         fontSize: '120%',
         position: 'relative',
