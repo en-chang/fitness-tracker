@@ -45,7 +45,8 @@ const App = () => {
           top: '20vh',
           marginRight: '5px',
           backgroundColor: 'red',
-          borderRadius: '8%',
+          padding: '4px',
+          borderRadius: '3%',
           color: 'white',
         }}
           onClick={handleClick2}>Decrement</button>
@@ -55,10 +56,19 @@ const App = () => {
           top: '20vh',
           marginLeft: '5px',
           backgroundColor: 'green',
-          borderRadius: '8%',
+          padding: '4px',
+          borderRadius: '3%',
           color: 'white',
         }}
           onClick={handleClick1}>Increment</button>
+      </div>
+      <div style={{
+        position: 'relative',
+        top: '28vh',
+      }}>
+        <video width="600" controls >
+          <source src="/Videos/Timer.mp4" type="video/mp4"/>
+        </video>
       </div>
     </div>
   )
