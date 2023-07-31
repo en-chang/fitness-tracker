@@ -3,19 +3,18 @@
 import React, { useState } from "react";
 
 const App = () => {
-  //  Counter is a state initialized to 0
   const [counter, setCounter] = useState(0)
   
-  // Function is called everytime increment button is clicked
-  const handleClick1 = () => {
-    // Counter state is incremented
-    setCounter(counter + 5)
+  const handleDecrement = () => {
+    setCounter(counter - 5)
   }
   
-  // Function is called everytime decrement button is clicked
-  const handleClick2 = () => {
-    // Counter state is decremented
-    setCounter(counter - 5)
+  const handleIncrement = () => {
+    setCounter(counter + 5)
+  }
+
+  const handleReset = () => {
+    setCounter(0)
   }
   
   return (
@@ -28,7 +27,7 @@ const App = () => {
       position: 'absolute',
       width: '100%',
       height: '100%',
-      top: '-15%',
+      top: '-13%',
     }}>
       Fitness Tracker
       <div style={{
@@ -49,7 +48,10 @@ const App = () => {
           borderRadius: '3%',
           color: 'white',
         }}
-          onClick={handleClick2}>Decrement</button>
+          onClick={handleDecrement}
+        >
+          Decrement
+        </button>
         <button style={{
           fontSize: '60%',
           position: 'relative',
@@ -60,11 +62,30 @@ const App = () => {
           borderRadius: '3%',
           color: 'white',
         }}
-          onClick={handleClick1}>Increment</button>
+          onClick={handleIncrement}
+        >
+          Increment
+        </button>
+      </div>
+      <div>
+      <button style={{
+          fontSize: '60%',
+          position: 'relative',
+          top: '20vh',
+          marginLeft: '5px',
+          backgroundColor: 'grey',
+          padding: '4px',
+          borderRadius: '3%',
+          color: 'white',
+        }}
+          onClick={handleReset}
+      >
+        Reset
+      </button>
       </div>
       <div style={{
         position: 'relative',
-        top: '28vh',
+        top: '25vh',
       }}>
         <video width="600" controls >
           <source src="/Videos/Timer.mp4" type="video/mp4"/>
