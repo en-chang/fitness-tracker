@@ -9,12 +9,10 @@ const App = () => {
     const requestCount = async () => {
       try {
         const response = await fetch(`https://fitness-tracker-enchang.vercel.app/api/get-count`, {
-          method: 'GET',
-          headers: {
-            'Access-Control-Allow-Origin': origin || '*'
-          }
+          method: 'GET'
         });
         const jsonResponse = await response.json();
+        console.log(jsonResponse);
         const repCount = jsonResponse.result.rows[0].rep;
         setCounter(repCount);
       } catch (err) {
@@ -33,10 +31,7 @@ const App = () => {
     const requestDecrement = async () => {
       try {
         const response = await fetch(`https://fitness-tracker-enchang.vercel.app/api/decrement`, {
-          method: 'PUT',
-          headers: {
-            'Access-Control-Allow-Origin': origin || '*'
-          }
+          method: 'PUT'
         });
         const jsonResponse = await response.json();
         console.log(jsonResponse);
@@ -56,10 +51,7 @@ const App = () => {
     const requestIncrement = async () => {
       try {
         const response = await fetch(`https://fitness-tracker-enchang.vercel.app/api/increment`, {
-          method: 'PUT',
-          headers: {
-            'Access-Control-Allow-Origin': origin || '*'
-          }
+          method: 'PUT'
         });
         const jsonResponse = await response.json();
         console.log(jsonResponse);
@@ -79,10 +71,7 @@ const App = () => {
     const requestReset = async () => {
       try {
         const response = await fetch(`https://fitness-tracker-enchang.vercel.app/api/reset`, {
-          method: 'PUT',
-          headers: {
-            'Access-Control-Allow-Origin': origin || '*'
-          }
+          method: 'PUT'
         });
         const jsonResponse = await response.json();
         console.log(jsonResponse);
