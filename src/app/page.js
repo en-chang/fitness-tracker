@@ -8,7 +8,12 @@ const App = () => {
   useEffect(() => {
     const requestCount = async () => {
       try {
-        const response = await fetch(`https://fitness-tracker-enchang.vercel.app/api/get-count`);
+        const response = await fetch(`https://fitness-tracker-enchang.vercel.app/api/get-count`, {
+          method: 'GET',
+          headers: {
+            'Access-Control-Allow-Origin': origin || '*'
+          }
+        });
         const jsonResponse = await response.json();
         const repCount = jsonResponse.result.rows[0].rep;
         setCounter(repCount);
