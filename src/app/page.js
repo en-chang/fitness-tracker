@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 
+export const revalidate = 0;
+
 const App = () => {
   const [counter, setCounter] = useState('Loading...');
 
@@ -9,8 +11,7 @@ const App = () => {
     const requestCount = async () => {
       try {
         const response = await fetch(`https://fitness-tracker-enchang.vercel.app/api/get-count`, {
-          method: 'GET',
-          cache: 'no-store'
+          method: 'GET'
         });
         const jsonResponse = await response.json();
         console.log(jsonResponse);
