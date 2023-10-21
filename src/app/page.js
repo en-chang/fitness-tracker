@@ -8,7 +8,7 @@ const App = () => {
   useEffect(() => {
     const requestCount = async () => {
       try {
-        const response = await fetch(`https://fitness-tracker-enchang.vercel.app/get-count`);
+        const response = await fetch(`https://fitness-tracker-enchang.vercel.app/api/get-count`);
         const jsonResponse = await response.json();
         const repCount = jsonResponse.result.rows[0].rep;
         setCounter(repCount);
@@ -27,7 +27,7 @@ const App = () => {
   const handleDecrement = () => {
     const requestDecrement = async () => {
       try {
-        const response = await fetch(`https://fitness-tracker-enchang.vercel.app/decrement`, { method: 'PUT' });
+        const response = await fetch(`https://fitness-tracker-enchang.vercel.app/api/decrement`, { method: 'PUT' });
         const jsonResponse = await response.json();
         setCounter(counter - 5)
       } catch (err) {
@@ -44,7 +44,7 @@ const App = () => {
   const handleIncrement = () => {
     const requestIncrement = async () => {
       try {
-        const response = await fetch(`https://fitness-tracker-enchang.vercel.app/increment`, { method: 'PUT' });
+        const response = await fetch(`https://fitness-tracker-enchang.vercel.app/api/increment`, { method: 'PUT' });
         const jsonResponse = await response.json();
         setCounter(counter + 5)
       } catch (err) {
@@ -61,7 +61,7 @@ const App = () => {
   const handleReset = () => {
     const requestReset = async () => {
       try {
-        const response = await fetch(`https://fitness-tracker-enchang.vercel.app/reset`, { method: 'PUT' });
+        const response = await fetch(`https://fitness-tracker-enchang.vercel.app/api/reset`, { method: 'PUT' });
         const jsonResponse = await response.json();
         setCounter(0)
       } catch (err) {
