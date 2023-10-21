@@ -9,7 +9,8 @@ const App = () => {
     const requestCount = async () => {
       try {
         const response = await fetch(`https://fitness-tracker-enchang.vercel.app/api/get-count`, {
-          method: 'GET'
+          method: 'GET',
+          cache: 'no-store'
         });
         const jsonResponse = await response.json();
         console.log(jsonResponse);
