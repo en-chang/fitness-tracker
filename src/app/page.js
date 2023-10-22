@@ -92,7 +92,7 @@ const App = () => {
   
   return (
     <div className="min-h-screen flex flex-col justify-around">
-      <h1 className="text-center text-5xl">
+      <h1 className="pt-8 text-center text-5xl">
         Fitness Tracker
       </h1>
       <p className="text-center text-5xl">
