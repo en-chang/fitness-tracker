@@ -569,17 +569,11 @@ video {
 .mr-2 {
   margin-right: 0.5rem;
 }
-.mt-2 {
-  margin-top: 0.5rem;
-}
-.mt-24 {
-  margin-top: 6rem;
-}
-.mt-20 {
-  margin-top: 5rem;
-}
 .mt-14 {
   margin-top: 3.5rem;
+}
+.mt-2 {
+  margin-top: 0.5rem;
 }
 .grid {
   display: grid;
@@ -646,7 +640,9 @@ video {
   font-weight: 500;
 }
 
-html, body {margin: 0; height: 100%; overflow: hidden}
+body {
+  height: 95vh;
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
