@@ -91,17 +91,15 @@ const App = () => {
   }
   
   return (
-    <div className="m-10 p-10 grid grid-cols-1 justify-items-center">
-      <div className="grid gap-y-8">
-        <h1 className="text-center text-5xl pt-2">
-          Fitness Tracker
-        </h1>
-        <p className="text-center text-5xl py-8">
-          {counter}
-        </p>
-      </div>
-      <div className="grid justify-items-center gap-y-3 py-10">
-        <div className="flex space-x-4">
+    <div className="min-h-screen flex flex-col justify-around">
+      <h1 className="text-center text-5xl">
+        Fitness Tracker
+      </h1>
+      <p className="text-center text-5xl">
+        {counter}
+      </p>
+      <div className="pt-8">
+        <div className="flex justify-center space-x-4">
           <button
             className="focus:outline-none bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-md px-5 py-2 mr-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
             onClick={handleDecrement}
@@ -115,16 +113,20 @@ const App = () => {
             Increment
           </button>
         </div>
-        <button
-          className="focus:outline-none bg-zinc-700 hover:bg-zinc-800 focus:ring-4 focus:ring-zinc-300 font-medium rounded-md px-10 py-2 mr-2 dark:bg-zinc-600 dark:hover:bg-zinc-700 dark:focus:ring-zinc-800"
-          onClick={handleReset}
-        >
-          Reset
-        </button>
+        <div className="flex justify-center pt-4">
+          <button
+            className="focus:outline-none bg-zinc-700 hover:bg-zinc-800 focus:ring-4 focus:ring-zinc-300 font-medium rounded-md px-10 py-2 mr-2 dark:bg-zinc-600 dark:hover:bg-zinc-700 dark:focus:ring-zinc-800"
+            onClick={handleReset}
+          >
+            Reset
+          </button>
+        </div>
       </div>
-      <video className="max-h-80 pt-6" controls >
-        <source src="/Videos/Timer.mp4" type="video/mp4"/>
-      </video>
+      <div className="flex justify-center">
+        <video className="max-h-80 w-fit" controls >
+          <source src="/Videos/Timer.mp4" type="video/mp4"/>
+        </video>
+      </div>
     </div>
   )
 }
