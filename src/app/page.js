@@ -93,7 +93,7 @@ const App = () => {
   return (
     <div className="m-10 p-10 grid grid-cols-1 justify-items-center">
       <div className="grid gap-y-8">
-        <h1 className="text-center text-5xl pt-4">
+        <h1 className="text-center text-5xl pt-2">
           Fitness Tracker
         </h1>
         <p className="text-center text-5xl py-8">
