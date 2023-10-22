@@ -91,14 +91,14 @@ const App = () => {
   }
   
   return (
-    <div className="m-6 p-10">
-      <h1 className="flex justify-center text-center pt-14 text-5xl">
+    <div className="m-6 p-10 grid grid-cols-1 justify-items-center">
+      <h1 className="text-center pt-14 text-5xl">
         Fitness Tracker
       </h1>
-      <p className="flex justify-center py-16 text-5xl">
+      <p className="py-16 text-5xl">
         {counter}
       </p>
-      <div className="flex justify-center space-x-4">
+      <div className="space-x-4">
         <button
           className="focus:outline-none bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-md px-5 py-2 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
           onClick={handleDecrement}
@@ -112,7 +112,7 @@ const App = () => {
           Increment
         </button>
       </div>
-      <div className="flex justify-center mt-2 mb-12">
+      <div className="mt-2 mb-12">
         <button
           className="focus:outline-none bg-zinc-700 hover:bg-zinc-800 focus:ring-4 focus:ring-zinc-300 font-medium rounded-md px-10 py-2 mr-2 mb-2 dark:bg-zinc-600 dark:hover:bg-zinc-700 dark:focus:ring-zinc-800"
           onClick={handleReset}
@@ -120,7 +120,7 @@ const App = () => {
           Reset
         </button>
       </div>
-      <div className="flex justify-center mt-24">
+      <div className="mt-14">
         <video className="max-h-80" controls >
           <source src="/Videos/Timer.mp4" type="video/mp4"/>
         </video>
